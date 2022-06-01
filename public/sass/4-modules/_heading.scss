@@ -1,0 +1,7 @@
+@use '../0-util/' as u;
+
+.heading {
+    font-size: 5rem;
+    font-family: u.$body-font;
+    color: u.$main-color;
+}

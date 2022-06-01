@@ -1,0 +1,16 @@
+@mixin container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+    width: 100%;
+}
+
+@mixin col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 650px) {
+        grid-template-columns: 1fr;
+    }
+ }
