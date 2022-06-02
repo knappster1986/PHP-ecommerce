@@ -3,7 +3,7 @@
 }
 
 :root {
-  --main-color: #000;
+  --main-color: #000; 
 }
 
 /*!
@@ -607,8 +607,34 @@ img {
   margin-bottom: 1.5em;
 }
 
+.header {
+  height: 80px;
+}
+
 .nav {
+  background-color: var(--main-color);
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.nav__logo {
+  color: #fff;
+}
+.nav__list {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.nav__item {
+  margin-bottom: 0;
+}
+.nav__link {
+  color: #fff;
+}
+.nav__link:hover {
+  color: #ddd;
 }
 
 .home {

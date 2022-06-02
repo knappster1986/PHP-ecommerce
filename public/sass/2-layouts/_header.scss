@@ -1,3 +1,33 @@
+.header {
+  height: 80px;
+}
 .nav {
+  background-color:  var(--main-color);
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+
+  &__logo {
+    color: #fff;
+  }
+
+  &__list {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  &__item {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    color: #fff;
+
+    &:hover {
+      color: #ddd;
+    }
+  }
 }
