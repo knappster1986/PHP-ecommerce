@@ -4,7 +4,7 @@
 
 
 <section class="hero">
-        <img src="https://source.unsplash.com/random/2050x600/?feet" alt="">
+        <img src="https://source.unsplash.com/random/2050x600/?shoes" alt="">
 </section>
 
 <section class="categories">
