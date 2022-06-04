@@ -1,34 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Homepage</title>
-    <link rel="stylesheet" href="sass/app.css">
-</head>
-<body>
-    <header class="header">
-        <nav class="nav">
-            <a href="/" class="nav__logo">My Shop</a>
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="#" class="nav__link">Home</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link">About</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link">Shop</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>    
+<?php require_once("../resources/config.php"); ?>
 
-    <?php require_once("../resources/config.php"); ?>
+<?php include(TEMPLATE_FRONT . DS . "header.php"); ?>
 
-</body>
-</html>
+
+<section class="hero">
+        <img src="https://source.unsplash.com/random/2050x600/?feet" alt="">
+</section>
+
+<section class="categories">
+    <?php 
+        $query = "SELECT * FROM categories";
+        $send_query = mysqli_query($connection, $query);
+
+        if (!$send_query) {
+            die("QUERY FAILED" . mysqli_error($connection));
+        }
+
+        while($row = mysqli_fetch_array($send_query)) {
+            echo "<div class='categories__block'>;";
+            echo "<img width='300' height='300' src='{$row['cat_img']}' alt='{$row['cat_title']}' >";
+            echo "<a href='#'>{$row['cat_title']}</a>";
+            echo "</div>";
+        }
+    ?>
+</section>
+
+
+
+
+
+<?php include(TEMPLATE_FRONT . DS . "footer.php"); ?>

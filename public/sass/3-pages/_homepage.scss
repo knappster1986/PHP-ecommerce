@@ -1,3 +1,12 @@
+@use '../0-util/' as u; 
+
 .home {
     text-align: center;
+}
+
+.categories {
+    @include u.container;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
 }
