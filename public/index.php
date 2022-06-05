@@ -18,7 +18,7 @@
 
         while($row = mysqli_fetch_array($send_query)) {
             echo "<div class='categories__block'>;";
-            echo "<img width='300' height='300' src='{$row['cat_img']}' alt='{$row['cat_title']}' >";
+            echo "<img class='categories__image' width='300' height='300' src='{$row['cat_img']}' alt='{$row['cat_title']}' >";
             echo "<a href='#'>{$row['cat_title']}</a>";
             echo "</div>";
         }

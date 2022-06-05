@@ -9,4 +9,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
+
+    &__image {
+        display: block;
+        margin: 1rem auto;
+    }
 }
