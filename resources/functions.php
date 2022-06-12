@@ -1,5 +1,7 @@
 <?php 
 
+// Helper Functions
+
  function redirect($location) {
      header("Location: $location");
  }
@@ -29,6 +31,32 @@
 
     return mysqli_fetch_array($result);
  }
+
+ // Get products
+
+
+ function get_products() {
+
+   $query = query(" SELECT * FROM products");
+   confirm($query);
+
+   while($row = fetch_array($query)) {
+      
+    $product = <<<DELIMETER
+
+    <img src="{$row['product_image']}" alt="{$row['product_title']}">
+    <h2>{$row['product_title']}</h2>
+    <p>{$row['product_price']}</p>
+
+DELIMETER;
+
+    echo $product;
+
+
+   }
+
+ }
+
 
 
 ?>

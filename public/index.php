@@ -25,6 +25,12 @@
     ?>
 </section>
 
+<section class="products">
+    <?php get_products(); ?>
+
+   
+</section>
+
 
 
 
