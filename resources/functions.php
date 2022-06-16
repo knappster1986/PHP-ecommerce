@@ -43,10 +43,13 @@
    while($row = fetch_array($query)) {
       
     $product = <<<DELIMETER
-
+    <div class="products__box">
+    <a href="item.php?id={$row['product_id']}">
     <img src="{$row['product_image']}" alt="{$row['product_title']}">
     <h2>{$row['product_title']}</h2>
-    <p>{$row['product_price']}</p>
+    <p>&#163;{$row['product_price']}</p>
+    </a>
+    </div>
 
 DELIMETER;
 
@@ -55,6 +58,18 @@ DELIMETER;
 
    }
 
+ }
+
+ function get_categories() { 
+    $query = query("SELECT * FROM categories");
+    confirm($query ); 
+
+    while($row = mysqli_fetch_array($query)) {
+        echo "<div class='categories__block'>;";
+        echo "<img class='categories__image' width='300' height='300' src='{$row['cat_img']}' alt='{$row['cat_title']}' >";
+        echo "<a href='#'>{$row['cat_title']}</a>";
+        echo "</div>";
+    }
  }
 
 

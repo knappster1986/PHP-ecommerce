@@ -1,0 +1,8 @@
+@use '../0-util/' as u; 
+
+.products {
+    @include u.container;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}

@@ -3,7 +3,7 @@
 }
 
 :root {
-  --main-color: #000;
+  --main-color: #000; 
 }
 
 /*!
@@ -635,6 +635,18 @@ img {
 }
 .nav__link:hover {
   color: #ddd;
+}
+
+.products {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
 }
 
 .home {
